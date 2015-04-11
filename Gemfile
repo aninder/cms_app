@@ -6,7 +6,7 @@ gem 'rails', '3.2.21'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development, :test do
-  # gem 'sqlite3'
+  gem 'sqlite3'
 end
 
 
@@ -48,4 +48,7 @@ gem 'refinerycms-acts-as-indexed', '~> 1.0.0'
 #  gem 'refinerycms-inquiries', '~> 2.1.0'
 #  gem 'refinerycms-search', '~> 2.1.0'
 #  gem 'refinerycms-page-images', '~> 2.1.0'
-gem 'mysql2'
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
