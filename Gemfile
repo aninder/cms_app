@@ -6,7 +6,12 @@ gem 'rails', '3.2.21'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development, :test do
-  gem 'sqlite3'
+  gem 'mysql2'
+  gem 'shotgun'
+  gem 'refinerycms-s3assets'
+  gem 'test-unit'
+  gem "better_errors"
+  gem "binding_of_caller"
 end
 
 
@@ -41,13 +46,15 @@ gem 'jquery-rails'
 
 # Refinery CMS
 gem 'refinerycms', '~> 2.1.0'
-
 # Optionally, specify additional Refinery CMS Extensions here:
 gem 'refinerycms-acts-as-indexed', '~> 1.0.0'
-#  gem 'refinerycms-blog', '~> 2.1.0'
-#  gem 'refinerycms-inquiries', '~> 2.1.0'
-#  gem 'refinerycms-search', '~> 2.1.0'
+gem 'refinerycms-inquiries', '~> 2.1.0'
+gem 'refinerycms-search', '~> 2.1.0'
+gem 'refinerycms-blog', '~> 2.1.0'
 #  gem 'refinerycms-page-images', '~> 2.1.0'
+gem 'acts-as-taggable-on', '~> 3.4'
+
+
 group :production do
   gem 'pg'
   gem 'rails_12factor'
